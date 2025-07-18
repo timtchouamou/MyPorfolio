@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timothee TCHOUAMOU</title>
+    <link rel="stylesheet" href="style.css">
+      <link href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" 
+          rel="stylesheet" />
+
+<script src="index.js"></script>
+
+<script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+   })();
+</script>
+       
+</head>
+
+<body>
+    <section id="landing-page" onmousemove="moveBackground(event)">
+        <nav>
+            <figure>
+                <img id="personal-logo"  src="./assets/Timsandra.jpg" alt="">
+            </figure>
+            <ul class="nav__link--list" onclick="toggleModal()">
+                <li class="nav__link">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">About</a>
+                </li>
+                <li class="nav__link">
+                    <a href="#project" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Projects</a>
+                </li>
+                <li class="nav__link" onclick="toggleModal()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    ">Contact</a>
+                </li>
+                <li class="nav__link" onclick="toggleContrast()">
+                    <a href="#" class="
+                    nav__link--anchor
+                    link__hover-effect
+                    link__hover-effect--black
+                    "><i class="fa fa-adjust"></i></a>
+                </li>
+            </ul>
+        </nav>
+
+        <header class="header">
+            <div class="header__content">
+                <h1 class="title">Hey</h1>
+                <h1 class="title orange">I'm Timothee</h1>
+                <p class="header__para">
+                 I'm a <b class="orange">Frontend Software Engineer</b> with a strong passion for building web applications with great user 
+                 experiences.
+                 <br>
+                 Here's a bit more <b class="orange click" onclick="toggleModal()">about me.</b>
+                </p>
+
+                <div class="social__list">
+                    <a href="https://www.linkedin.com/in/timothee-djouokep-tchouamou-13a633bb/" target="_blank" class="social__link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/timtchouamou" target="_blank" class="social__link">
+                         <i class="fab fa-github"></i>
+                    </a>
+                    <a href="./assets/TimsResume.pdf" target="_blank" class="social__link">
+                        <i class="fas fa-file-pdf"></i>
+                    </a>   
+                </div>
+            </div>
+        </header>
+        <a href="#">
+            <button class="mail__btn click " onclick="toggleModal()">
+                <i class="fas fa-envelope"></i>
+            </button>
+        </a>
+        <a href="#project" class="scroll">
+            <div class="scroll__icon click"></div>
+        </a>
+        <div class="modal">
+            <div class="modal__half modal__about">
+                <h3 class="modal__title modal__title--about">Here's a bit about me.</h3>
+                <h4 class="modal__sub-title modal__sub-title--about">Frontend Software Engineer.</h4>
+                <p class="modal__para">I'am a 38 year-old American <b><span class="orange">Frontend sofware Engineer </span></b> with a strong passion for developping websites with great <span class="orange"> user experiences</span>
+                <br>
+                I currently work on extremly dificult engineering problems and learn from a team consisting of scene of the most <b><span class="orange">talented</span> </b> and <b><span class="orange">experienced</span> </b> software engeneer every day
+                </p>
+                <div class="modal__languages">
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxeNFO8PSlvOvudmrtLIOYdTpN6o77VKolQ&s" alt="">
+                        <div class="language__mane">HTML</div>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="data:image/png;base64,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" alt="">
+                        <div class="language__mane">CSS</div>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="data:image/png;base64,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" alt="">
+                            <div class="language__mane">JavaScript</div>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROs2WuLdVnStQXQ6LRLp1LlnbA6YHqNyVTow&s" alt="">
+                      <div class="language__mane">REACT JS</div>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIxeNFO8PSlvOvudmrtLIOYdTpN6o77VKolQ&s" alt="">
+                           <div class="language__mane">HTML</div>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="data:image/png;base64,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" alt="">
+                            <div class="language__mane">CSS</div>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="data:image/png;base64,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" alt="">
+                           <div class="language__mane">JavaScript</div>
+                    </figure>
+                    <figure class="modal__language">
+                        <img class="modal__language--img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROs2WuLdVnStQXQ6LRLp1LlnbA6YHqNyVTow&s" alt="">
+                         <div class="language__mane">REACT JS</div>
+                    </figure>
+                </div>
+            </div>
+            <div class="modal__half modal__contact">
+                 <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+                <h3 class="modal__title modal__title--contact">
+                    Let's have a chat!
+                </h3>
+                <h4 class="modal__sub-title modal__sub-title--contact">
+                    I'm currently open to new oppotunities.
+                </h4>
+                <form id="contact__form" onsubmit="contact(event)">
+                    <div class="form__item">
+                        <label class="form__item--label" for="name">Name</label>
+                        <input class="input" name="user_name" type="text">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="email">Email</label>
+                        <input class="input" name="user_email" type="email">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__item--label" for="message">Message</label>
+                        <textarea class="input" name="message" type="text"></textarea>
+                    </div>
+                    <button id="contact__submit" class="form__submit">Send it my way</button>
+                </form>
+                <div class="modal__overlay modal__overlay--loading">
+                    <i class="fas fa-spinner"></i>
+                </div>
+                <div class="modal__overlay modal__overlay--success">
+                    Thanks for the message! Looking forward to speaking to you soon.
+                </div>
+            </div> 
+        </div>
+        <img src="./assets/semi circle.svg" class="shape shape--0">
+        <img src="./assets/circle.svg" class="shape shape--1">
+        <img src="./assets/circle.svg"   class="shape shape--2">
+        <img src="./assets/squiggly.svg" class="shape shape--3">
+        <img src="./assets/triangle.svg" class="shape shape--4">
+        <img src="./assets/triangle.svg" class="shape shape--5">
+        <img src="./assets/semi circle.svg" class="shape shape--6">
+        <img src="./assets/circle.svg" class="shape shape--7">
+        <img src="./assets/squiggly.svg" class="shape shape--8">
+    </section>
+
+    <section id="project">
+        <div class="container">
+            <div class="row">
+                <h1 class="section__title">here are some of my <span class="orange">projects</span> </h1>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/blinker mockup.png" class="project__img" alt=""> 
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Car Sales Projects</h3>
+                                <h4 class="project__description--sub-title"> Html, CSS, JavaScript, Vue, Vuex</h4>
+                                <p class="project__description--para">America's most awarded car subcription platform</p>
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/google mockup.png" class="project__img" alt=""> 
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Welcom to Google in-Store</h3>
+                                <h4 class="project__description--sub-title"> Html, CSS, JavaScript, Vue, Vuex</h4>
+                                <p class="project__description--para">Welcom to Google in-Store, Report any issues with your retail stores Google products, retail displays & Chrombook's accross America & Canada</p>
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="project__list">
+                    <li class="project">
+                        <div class="project__wrapper">
+                            <img src="./assets/Frontend Simplified.png" class="project__img" alt=""> 
+                            <div class="project__wrapper--bg"></div>
+                            <div class="project__description">
+                                <h3 class="project__description--title">Introduction to the Course</h3>
+                                <h4 class="project__description--sub-title"> Html, CSS, JavaScript, Vue, Vuex</h4>
+                                <p class="project__description--para"></p>
+                                <div class="project__description--links">
+                                    <a href="" class="project__description--link">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                    <a href="" class="project__description--link">
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="container footer__container">
+            <div class="row footer__row">
+                <figure>
+                    <img class="footer__logo--img" src="./assets/Timsandra.jpg" alt="">
+                </figure>
+                <div class="footer__social--list">
+                    <a href="https://github.com/timtchouamou" target="_blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                    Github
+                    </a>
+                    <a href="https://www.linkedin.com/in/timothee-djouokep-tchouamou-13a633bb/" target="_blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                    LinkedIn
+                    </a>
+                    <a href="#" onclick="toggleModal()" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                    Email
+                    </a>
+                    <a href="./assets/TimsResume.pdf" target="_blank" class="
+                    footer__social--link
+                    link__hover-effect
+                    link__hover-effect--white
+                    ">
+                    Resume
+                    </a>
+                </div>
+                <div class="footer__copyright">Copyright © 2025 Timothee TCHOUAMOU</div>
+            </div>
+        </div>
+    </footer>
+   
+    
+</body>
+</html>
