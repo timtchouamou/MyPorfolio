@@ -56,7 +56,7 @@ function toggleContrast() {
      document.body.classList += " dark-theme"
     }
     else {
-     document.body.classList.remove(" dark-theme")
+     document.body.classList.remove("dark-theme")
     }
 }
 
